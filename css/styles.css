@@ -23,6 +23,11 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 .list {
   list-style: none;
   padding-inline-start: 0;
@@ -219,9 +224,7 @@ ul {
 .team-item {
   width: calc((100%-72px) / 4);
 }
-.team-photo {
-  display: block;
-}
+
 .team-names {
   background-color: #ffffff;
   padding-top: 32px;
@@ -259,9 +262,19 @@ ul {
 /*--------- page PORTFOLIO ------*/
 .projects-list {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
 }
+.projects-item {
+  margin-top: 96px;
+  margin-bottom: 72px;
+}
+
 .projects-btn {
+  border: 1px solid #e7e9fc;
+  border-radius: 4px;
+  padding: 12px 24px;
   color: var(--primary-brand);
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -283,8 +296,25 @@ ul {
 .works-list a {
   text-decoration: none;
 }
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc((100%-2 * 24) 3);
+  row-gap: 48px;
+  column-gap: 24px;
+  margin-bottom: 120px;
+}
+.works-item {
+  row-gap: 48px;
+  column-gap: 24px;
+}
+.works-content {
+  display: block;
+  padding: 32px 16px;
+}
 
 .works-title {
+  margin-bottom: 8px;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
