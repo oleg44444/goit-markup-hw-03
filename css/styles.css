@@ -158,6 +158,7 @@ img {
 }
 .quality-title {
   visibility: hidden;
+  height: 0;
 }
 .qualite-item {
   width: 264px;
