@@ -48,6 +48,7 @@ button {
 /* --Logo-- */
 .header {
   border-bottom: 1px solid #e7e9fc;
+  max-height: 72px;
 }
 .logo {
   color: var(--primary-text-color);
@@ -65,7 +66,6 @@ button {
 .main-nav {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e7e9fc;
 }
 .header-navigation {
   display: flex;
@@ -80,8 +80,8 @@ button {
 }
 .header-link {
   display: block;
-  padding-top: 21px;
-  padding-bottom: 21px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   color: var(--primary-text-color);
   font-style: normal;
   font-weight: 500;
@@ -124,15 +124,10 @@ button {
   text-align: center;
   padding: 188px 0;
 }
-.hero-content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+
 .hero-title {
   width: 496px;
-  margin-top: 0;
-  margin-bottom: 48px;
+  margin: 0 auto 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -152,6 +147,7 @@ button {
   letter-spacing: 0.04em;
   background-color: var(--primary-brand);
   cursor: pointer;
+  margin: 0 auto;
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -168,9 +164,19 @@ button {
   flex-wrap: wrap;
   gap: 24px;
 }
-.quality-title {
-  visibility: hidden;
-  height: 0;
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 .qualite-item {
   width: 264px;
@@ -198,6 +204,7 @@ button {
 }
 .work-item {
   width: calc((100%-72) / 3);
+  border: 1px solid #e7e9fc;
 }
 .work-title {
   margin-bottom: 72px;
@@ -211,9 +218,6 @@ button {
   text-transform: capitalize;
 }
 
-.projects-title {
-  visibility: hidden;
-}
 /* Our Team */
 .team {
   background-color: var(--light-mode-backgrounds);
@@ -271,14 +275,14 @@ button {
   margin-top: 16px;
 }
 /*--------- page PORTFOLIO ------*/
+.projects {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 .projects-list {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 24px;
-}
-.projects-item {
-  margin-top: 96px;
   margin-bottom: 72px;
 }
 
@@ -310,17 +314,14 @@ button {
 .works-list {
   display: flex;
   flex-wrap: wrap;
-  width: calc((100%-2 * 24) 3);
   row-gap: 48px;
   column-gap: 24px;
-  margin-bottom: 120px;
 }
 .works-item {
-  row-gap: 48px;
-  column-gap: 24px;
+  width: 360px;
+  height: 420px;
 }
 .works-content {
-  display: block;
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
